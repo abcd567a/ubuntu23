@@ -1,6 +1,7 @@
-## Package install of ver 9.0 piaware, dump1090-fa, piaware-web, and dump978-fa on:
-### (1) Ubuntu23.10 (mantic) arm64/aarch64 (RPi 3 & 4) </br></br>
-
+### Package install of ver 9.0 piaware, dump1090-fa, piaware-web, and dump978-fa on:
+**(1) 64-bit Ubuntu23.10 (mantic) AMD64/x86_64 (PC & Laptop)** </br>
+**(2) 64-bit Ubuntu23.10 (mantic) arm64/aarch64 (RPi 3 & 4)** </br>
+**(3) 32-bit Ubuntu23.10 (mantic) armhf (RPi 3 & 4)** </br></br>
 ### STEP-1: Add this repository to list of apt sources by following 3 commands:
 **First two commands are long. Please scroll right to see and copy them in FULL.** 
 ```
