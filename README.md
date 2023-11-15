@@ -20,8 +20,10 @@
 
 ### STEP-3: (for USA only) Additional steps to install & configure dump978-fa
 
-`sudo apt install dump978-fa  ` </br>
-`sudo apt install skyaware978 `  </br>
+`sudo apt install dump978-fa  ` 
+
+`sudo apt install skyaware978 `  
+
 `sudo piaware-config uat-receiver-type sdr ` </br>
 
 **Configure dump1090-fa and dump978-fa to use their respective dongles.**
