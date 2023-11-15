@@ -1,51 +1,28 @@
 ### Package install of ver 9.0 piaware, dump1090-fa, piaware-web, and dump978-fa on:
 **(1) 64-bit Ubuntu23.10 (mantic) AMD64/x86_64 (PC & Laptop)** </br>
 **(2) 64-bit Ubuntu23.10 (mantic) arm64/aarch64 (RPi 3 & 4)** </br>
-**(3) 32-bit Ubuntu23.10 (mantic) armhf (RPi 3 & 4)** </br></br>
+**(3) 32-bit Ubuntu23.10 (mantic) armhf (RPi 3 & 4)** </br>
 ### STEP-1: Add this repository to list of apt sources by following 3 commands:
-**First two commands are long. Please scroll right to see and copy them in FULL.** 
-```
-sudo wget -O /etc/apt/sources.list.d/abcd567a.list https://abcd567a.github.io/ubuntu23/abcd567a.list  
-```
-```
-sudo wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/ubuntu23/KEY2.gpg  
-```
-```
-sudo apt update  
-```
 
-</br>
+`sudo wget -O /etc/apt/sources.list.d/abcd567a.list https://abcd567a.github.io/ubuntu23/abcd567a.list  `
+
+`sudo wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/ubuntu23/KEY2.gpg  `
+
+`sudo apt update  `
+
 
 ### STEP-2: Install packages
-```
-sudo apt install piaware  
-```
-```
-sudo apt install dump1090-fa  
-```
-```
-sudo apt install piaware-web  
-```
-```
-sudo piaware-config feeder-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
-```
-```
-sudo reboot 
-```
-
-&nbsp;
+`sudo apt install piaware  ` </br>
+`sudo apt install dump1090-fa  ` </br>
+`sudo apt install piaware-web  ` </br>
+`sudo piaware-config feeder-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx ` </br>
+`sudo reboot `
 
 ### STEP-3: (for USA only) Additional steps to install & configure dump978-fa
 
-```
-sudo apt install dump978-fa  
-```
-```
-sudo apt install skyaware978  
-```
-```
-sudo piaware-config uat-receiver-type sdr  
-```
+`sudo apt install dump978-fa  ` </br>
+`sudo apt install skyaware978 `  </br>
+`sudo piaware-config uat-receiver-type sdr ` </br>
 
 **Configure dump1090-fa and dump978-fa to use their respective dongles.**
 If you want to receive both ES1090 and UAT978, then two dongles are required, one for 1090 MHz and other for 978 MHz. In this case you will have to serialize dongles so that correct dongle+antenna sets are used by dump1090-fa and dump978-fa.
@@ -56,15 +33,11 @@ Serialize dongles with following serial numbers </br>
 
 After Serializing dongles with serial numbers as above, issue following commands to configure dump1090-fa and dump978-fa to use their respective dongles:
 
-```
-sudo sed -i 's/^RECEIVER_SERIAL=.*/RECEIVER_SERIAL=00001090/' /etc/default/dump1090-fa  
-```
-```
-sudo sed -i 's/driver=rtlsdr[^ ]* /driver=rtlsdr,serial=00000978 /' /etc/default/dump978-fa  
-```  
-```
-sudo reboot 
-```
+`sudo sed -i 's/^RECEIVER_SERIAL=.*/RECEIVER_SERIAL=00001090/' /etc/default/dump1090-fa  `
+
+`sudo sed -i 's/driver=rtlsdr[^ ]* /driver=rtlsdr,serial=00000978 /' /etc/default/dump978-fa `
+
+`sudo reboot ` 
 
 ## How to Serialize Dongles:
 (1) Issue following command to install serialization software: </br>
